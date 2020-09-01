@@ -11,19 +11,30 @@ function factorial (angka) {
 console.log(factorial(4)) 
 
 // recursive deret angka genap
-function even (n) {
-    if((n == 0) || (n == 1)) {
-        console.log(0) 
-    } else if(n%2 == 0) {
-         even (n-2)
-         console.log(q)
+// function even (n) {
+//     if((n == 0) || (n == 1)) {
+//         console.log(0) 
+//     } else if(n%2 == 0) {
+//          even (n-2)
+//          console.log(q)
+//     } else {
+//         even (n-2)
+//          console.log(n-1)
+//     }
+//  }
+function baruGenap (n) {
+    if (n == 0) {
+        console.log (0)
     } else {
-        even (n-2)
-         console.log(n-1)
+        baruGenap (n-1)
+        if (n%2 == 0) {
+            console.log(n)
+        }
+        
     }
- }
+}
  
- console.log(even(5))
+ console.log(baruGenap(5))
    
 
 
@@ -33,6 +44,6 @@ function fx (n) {
     if (n == 1) {
         return 3;
     } else {
-        return (3*(2**(n-1)));
+        return fx (n-1)*2
     }
 }
